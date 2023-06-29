@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, '../public/index.html'))
 })
 
-app.get('/lol/champion', getChamp)
+// this is where you declare variable name for the param defined in main.js
+app.get('/lol/champion/:name', getChamp)
 
 app.listen(4000, () => console.log(`We livin' on ${SERVER_PORT}`))

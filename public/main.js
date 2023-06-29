@@ -1,13 +1,29 @@
-const searchBtn = document.querySelector('button')
+const searchChamp = document.getElementById('searchForm')
+const champName = document.getElementById('champ-name')
+const champContainer = document.getElementById('champGrid')
 
-const getChamp = () => {
-    
-    axios.get(`/lol/champion`)
-        .then(res => {
-          console.log(res.data)
-          alert(res.data.name)
-        })
+let currentSelect = {}
+let heroName = champName.value
+
+const getChamp = (evt) => {
+
+  evt.preventDefault()
+
+  axios.get(`/lol/champion/${champName.value}`)
+      .then(res => {
+
+        let currentSelect = res.data[champName.value]
+        console.log(currentSelect)
+
+        champContainer.innerHTML = `
+          <div>
+            <img src='https://ddragon.leagueoflegends.com/cdn/13.13.1/img/champion/${champName.value}.png'
+            <br>
+            ${currentSelect.lore}
+          </div>
+        `
+
+      })
 }
 
-searchBtn.addEventListener('click', getChamp)
-
+searchChamp.addEventListener('submit', getChamp)

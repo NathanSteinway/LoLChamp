@@ -9,13 +9,18 @@
 <body>
     <nav>NAV</nav>
     <section id="roleContainer"><img src="./assets/Roles.jpg"></section>
-    <main id="champGrid"></main>
+    <main id="champGrid">
+        <div id="champContainer"></div>
+    </main>
     <form id="searchForm">
         <label for="cname">Champion Name:</label><br>
         <input type="text" id="champ-name" name="cname"><br>
         <button type="submit" id="submitBtn">GO</button>
+
     </form>
-    <script src='./main.js'></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- <button type="button" id="all-btn">ALL</button> -->
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src='./main.js'></script>
 </body>
 </html>

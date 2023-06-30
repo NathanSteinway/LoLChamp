@@ -14,8 +14,15 @@ nav {
     width: 100%;
 }
 
-#champGrid {
+#champContainer {
     display:flex;
+    flex-wrap: wrap;
+}
+
+.newChamp {
+    margin: 10px;
+    width: 60px;
+    height: 60px;
 }
 
 

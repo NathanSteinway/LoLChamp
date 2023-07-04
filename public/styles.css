@@ -130,6 +130,14 @@ nav ul a {
 .spellDetails {
     position: absolute;
     display:none;
+    width: 20%;
+    height: auto;
+    color: white;
+}
+
+.spellDetailsContainer {
+
+
 }
 
 

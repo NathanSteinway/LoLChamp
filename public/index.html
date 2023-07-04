@@ -7,20 +7,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>NAV</nav>
-    <section id="roleContainer"><img src="./assets/Roles.jpg"></section>
-    <main id="champGrid">
-        <div id="champContainer"></div>
-    </main>
-    <form id="searchForm">
-        <label for="cname">Champion Name:</label><br>
-        <input type="text" id="champ-name" name="cname"><br>
-        <button type="submit" id="submitBtn">GO</button>
 
-    </form>
-        <!-- <button type="button" id="all-btn">ALL</button> -->
+        <nav>
+            <ul>
+                <li><a href='.'>RELOAD PAGE</a></li>
+                <li><a href='.'>DUMMY</a></li>
+                <li><a href='.'>DUMMY</a></li>
+            </ul>
+        </nav>
 
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src='./main.js'></script>
+
+            <form id="searchForm">
+                <input type="text" id="champ-name" name="cname" placeholder="Search Champion Here"><br>
+            </form>
+        
+        
+            <section id="roleContainer">
+                <div id="roleBtnContainer">
+                    <button id="Support" class="classBtn"> <img src='./assets/Controller_icon.png'> </button>
+                    <button id="Fighter" class="classBtn"> <img src='./assets/Fighter_icon.png'> </button>
+                    <button id="Mage" class="classBtn"> <img src='./assets/Mage_icon.png'> </button>
+                    <button id="Marksman" class="classBtn"> <img src='./assets/Marksman_icon.png'> </button>
+                    <button id="Assassin" class="classBtn"> <img src='./assets/Slayer_icon.png'> </button>
+                    <button id="Tank" class="classBtn"> <img src='./assets/Tank_icon.png'> </button>
+                </div>
+            </section>
+            <section id="champGrid">
+                <div id="champContainer"></div>
+            </section>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src='./main.js'></script>
 </body>
 </html>
+

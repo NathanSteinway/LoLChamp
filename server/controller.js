@@ -52,6 +52,33 @@ module.exports = {
             res.status(404).send('Champion Not Found')
         }
 
+    },
+
+    getChampByClass: (req, res) => {
+
+        console.log(req.params)
+        // named after the url in server
+        let { tag } = req.params
+        let filteredChamps = []
+
+        // champArr[0] is array of all champs
+        // each champ in champ object do x
+        // champ represents the keyname of the champion
+        for(let champ in champArr[0]) {
+
+            // for each one, grab their tags and loop through that array
+            for(let i = 0; i < champArr[0][champ].tags.length; i++){
+                console.log(champArr[0][champ].tags[i], `requested tag: ${tag}`)
+                // if the champ's tags match the tag from req.params, push to filteredChamps
+                if(champArr[0][champ].tags[i] === tag) {
+                    filteredChamps.push(champArr[0][champ])
+                }
+            }
+
+        }
+
+        res.status(200).send(filteredChamps)
+
     }
 
 }

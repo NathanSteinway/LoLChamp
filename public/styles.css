@@ -5,24 +5,131 @@ body {
     align-items: center;
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    background: url("./assets/BGBlurred_fade.png");
+    background-size: cover;
 }
 
 nav {
     display:flex;
-    background-color: black;
-    height: 100px;
+    border-bottom: solid;
+    justify-content: center;
+    background-color: #0d0e0e;
+    border-color: #292622;
+    height: 80px;
     width: 100%;
+}
+
+#searchForm {
+    margin: 25px;
+}
+
+#searchForm input {
+    border-radius: 20px;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+}
+
+nav ul {
+    width: 75%;
+    padding: 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type:none;
+}
+
+nav ul a {
+    text-decoration: none;
+    color:white;
+    text-align: center;
+}
+
+#champGrid {
+    width: 75%;
 }
 
 #champContainer {
     display:flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    transition: 2s;
+
 }
 
 .newChamp {
-    margin: 10px;
+    display:block;
+    opacity: 1;
+    margin: 2px;
     width: 60px;
     height: 60px;
+    transition: 200ms;
+}
+
+.splash-container {
+    display:flex;
+    padding-top: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.splash-title {
+
+    /* positioning */
+    position:absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* text */
+    text-align: center;
+    text-transform: uppercase;
+    list-style-type: none;
+    color: white;
+    font-size: 80px;
+}
+
+.fadeaway {
+    opacity: 0;
+    transition: 400ms;
+}
+
+.classBtn {
+    margin-bottom: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.classBtn img {
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+}
+
+.champContent {   
+    margin-top: 50px;
+}
+
+.champSpells {
+    display:flex;
+    gap: 20px;
+}
+
+.spellIcon {
+    cursor: pointer;
+}
+
+.spellDetails {
+    position: absolute;
+    display:none;
 }
 
 

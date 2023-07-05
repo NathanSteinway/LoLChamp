@@ -134,10 +134,10 @@ nav ul a {
 
 .spellDetails {
     position: absolute;
-    bottom: 150px;
-    left: 290px;
+    bottom: 165px;
+    left: 355px;
     display:none;
-    width: 23%;
+    width: 20%;
     height: auto;
     color: white;
 }

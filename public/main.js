@@ -60,6 +60,7 @@ const getChamp = (evt, champ) => {
             </div>
             
             <div class="champContent">
+
               <div class="champSpells">
                   <div class="passive">
                     <img class="spellIcon" onclick="displayDetails(event, 'passiveDetails')" src="http://ddragon.leagueoflegends.com/cdn/13.13.1/img/passive/${currentSelect.passive.image.full}">

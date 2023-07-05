@@ -58,9 +58,9 @@ const getChamp = (evt, champ) => {
               <h1 class="splash-title">${champ}</h1>
               <img class="splash" src='http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ}_0.jpg'>
             </div>
+            
             <div class="champContent">
               <div class="champSpells">
-
                   <div class="passive">
                     <img class="spellIcon" onclick="displayDetails(event, 'passiveDetails')" src="http://ddragon.leagueoflegends.com/cdn/13.13.1/img/passive/${currentSelect.passive.image.full}">
                   </div>                
@@ -80,17 +80,43 @@ const getChamp = (evt, champ) => {
                     <img id="R" class="spellIcon" onclick="displayDetails(event, 'rDetails')" src="http://ddragon.leagueoflegends.com/cdn/13.13.1/img/spell/${currentSelect.spells[3].image.full}">
                   </div>
 
+                  <div class="champTips">
+                    <h1>Ally Tips</h1>
+                      <p>
+                        ${currentSelect.allytips[0]}
+                        <br>
+                        <br>
+                        ${currentSelect.allytips[1]}
+                        <br>
+                        <br>
+                        ${currentSelect.allytips[2]}
+                      </p>
+                  </div>
+
+                  <div class="champTips">
+                  <h1>Enemy Tips</h1>
+                    <p>
+                      ${currentSelect.enemytips[0]}
+                      <br>
+                      <br>
+                      ${currentSelect.enemytips[1]}
+                      <br>
+                      <br>
+                      ${currentSelect.enemytips[2]}
+                    </p>
+                </div>
+
               </div>
 
               <div class="spellDetailsContainer">
-                <p id="passiveDetails" class="spellDetails">${currentSelect.passive.description}</p>
-                <p id="qDetails" class="spellDetails">${currentSelect.spells[0].description}</p>
-                <p id="wDetails" class="spellDetails">${currentSelect.spells[1].description}</p>
-                <p id="eDetails" class="spellDetails">${currentSelect.spells[2].description}</p>
-                <p id="rDetails" class="spellDetails">${currentSelect.spells[3].description}</p>
-              </div>
+              <p id="passiveDetails" class="spellDetails">${currentSelect.passive.description}</p>
+              <p id="qDetails" class="spellDetails">${currentSelect.spells[0].description}</p>
+              <p id="wDetails" class="spellDetails">${currentSelect.spells[1].description}</p>
+              <p id="eDetails" class="spellDetails">${currentSelect.spells[2].description}</p>
+              <p id="rDetails" class="spellDetails">${currentSelect.spells[3].description}</p>
             </div>
-
+            </div>
+              
           </div>
         `
       })
